@@ -1,0 +1,452 @@
+<!-- 
+    CONTACT FORM TEMPLATE
+    This is an optional addition to your portfolio.
+    Add this form to your index.html where you want the contact section.
+    
+    To use this form:
+    1. Copy the HTML code below
+    2. Replace or add it to your index.html in the contact section
+    3. Update the form action and method based on your backend
+    4. Test the form submission
+    
+    Backend Options:
+    - Formspree (formspree.io) - No backend needed
+    - EmailJS - Client-side email sending
+    - Your own backend API
+    - Netlify Forms - If deploying to Netlify
+-->
+
+<!-- Contact Form Section -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Get In Touch</h2>
+            <p>Have a question or want to work together? I'd love to hear from you.</p>
+        </div>
+
+        <div class="contact-container">
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper">
+                <form class="contact-form" id="contactForm" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
+                    <div class="form-group">
+                        <label for="name">Your Name *</label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            required 
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Your Email *</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required 
+                            placeholder="your-email@example.com"
+                            autocomplete="email"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input 
+                            type="text" 
+                            id="subject" 
+                            name="subject" 
+                            placeholder="What is this about?"
+                            autocomplete="off"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            rows="6" 
+                            required 
+                            placeholder="Tell me more about your project or question..."
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <p class="form-note">* Required fields</p>
+                </form>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p><a href="mailto:hello@andrew.com">hello@andrew.com</a></p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Location</h3>
+                    <p>Nigeria</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Response Time</h3>
+                    <p>Usually within 24 hours</p>
+                </div>
+
+                <div class="social-connect">
+                    <h3>Connect With Me</h3>
+                    <div class="social-links">
+                        <a href="https://github.com" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" title="Twitter">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="mailto:hello@andrew.com" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CSS Styles for Contact Form -->
+<style>
+/* Contact Section */
+.contact-section {
+    padding: 6rem 2rem;
+    background-color: var(--primary-bg);
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 3rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Contact Form Styles */
+.contact-form-wrapper {
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 2.5rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+    background-color: var(--tertiary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--text-secondary);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-purple);
+    background-color: rgba(139, 92, 246, 0.05);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-form .btn {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.form-note {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-top: -0.5rem;
+}
+
+/* Contact Info Styles */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.info-card {
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    border-color: var(--accent-purple);
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+}
+
+.info-icon {
+    font-size: 2rem;
+    color: var(--accent-purple);
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.info-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.info-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.info-card a {
+    color: var(--accent-purple);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.info-card a:hover {
+    color: var(--accent-violet);
+    text-decoration: underline;
+}
+
+/* Social Connect Card */
+.social-connect {
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.social-connect h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--tertiary-bg);
+    border: 2px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--accent-purple);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: linear-gradient(135deg, var(--accent-purple), var(--accent-violet));
+    color: white;
+    border-color: var(--accent-purple);
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+}
+
+/* Form Success Message */
+.form-success {
+    background-color: rgba(6, 182, 212, 0.1);
+    border: 1px solid var(--accent-cyan);
+    color: var(--accent-cyan);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    animation: slideInUp 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-form-wrapper {
+        padding: 1.5rem;
+    }
+
+    .contact-info {
+        gap: 1rem;
+    }
+
+    .info-card,
+    .social-connect {
+        padding: 1.5rem 1rem;
+    }
+
+    .contact-form .btn {
+        padding: 0.75rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-section {
+        padding: 4rem 1rem;
+    }
+
+    .contact-form-wrapper {
+        padding: 1rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 0.6rem 0.75rem;
+        font-size: 16px; /* Prevent zoom on iOS */
+    }
+
+    .social-links {
+        gap: 0.75rem;
+    }
+
+    .social-links a {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+}
+</style>
+
+<!-- JavaScript for Form Handling -->
+<script>
+// Contact Form Submission Handler
+const contactForm = document.getElementById('contactForm');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        // Formspree will handle submission, but we can add client-side validation
+        
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        // Validate fields
+        if (!name || !email || !message) {
+            e.preventDefault();
+            alert('Please fill in all required fields');
+            return;
+        }
+
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            e.preventDefault();
+            alert('Please enter a valid email address');
+            return;
+        }
+
+        // Show loading state
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+
+        // Restore button after submission (Formspree redirects, but just in case)
+        setTimeout(() => {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        }, 3000);
+    });
+}
+</script>
+
+<!-- 
+    SETUP INSTRUCTIONS:
+    
+    1. FORMSPREE SETUP (Recommended for beginners):
+       - Go to https://formspree.io
+       - Sign up or log in
+       - Create a new form
+       - Copy your form ID
+       - Replace 'YOUR_FORM_ID' in the form action above
+       - Example: action="https://formspree.io/f/xyzabc123"
+       - That's it! Emails will be sent to your address
+    
+    2. EMAILJS SETUP (Client-side email):
+       - Go to https://www.emailjs.com
+       - Sign up and get your service ID
+       - Create an email template
+       - Add EmailJS library to index.html:
+         <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/build/index.min.js"></script>
+       - Initialize and use EmailJS in script.js
+    
+    3. NETLIFY FORMS (If deployed on Netlify):
+       - Add netlify attribute to form: <form name="contact" method="POST" netlify>
+       - Netlify will automatically handle submissions
+       - Configure notifications in Netlify dashboard
+    
+    4. CUSTOM BACKEND:
+       - Change form action to your API endpoint
+       - Change method to POST
+       - Make sure CORS is configured
+       - Handle response in JavaScript
+-->
