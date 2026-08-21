@@ -1,6 +1,4 @@
-/* ===========================
-   JAVASCRIPT - INTERACTIVITY
-   =========================== */
+/*JAVASCRIPT - INTERACTIVITY*/
 
 // Mobile Menu Toggle
 const hamburger = document.querySelector('.hamburger');
