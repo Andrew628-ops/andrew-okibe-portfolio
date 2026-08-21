@@ -1,8 +1,3 @@
-/* ===========================
-   PORTFOLIO CONFIGURATION
-   Edit this file to customize your portfolio content
-   =========================== */
-
 const portfolioConfig = {
     // Personal Information
     personal: {
@@ -28,7 +23,7 @@ const portfolioConfig = {
         text: "I'm Andrew Okibe, a passionate Web Developer and AI Engineer from Nigeria. I enjoy building modern, responsive and scalable web applications, and exploring the exciting world of Artificial Intelligence and Machine Learning. I'm always learning, building and improving — turning ideas into real-world solutions.",
         stats: [
             { number: "2+", label: "Years Learning" },
-            { number: "10+", label: "Projects Built" },
+            { number: "3+", label: "Projects Built" },
             { number: "5+", label: "Tech Tools" },
             { number: "100%", label: "Passion for Growth" }
         ]
@@ -177,7 +172,6 @@ const portfolioConfig = {
     }
 };
 
-// Export configuration (for use in other scripts if needed)
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = portfolioConfig;
 }
